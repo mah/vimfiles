@@ -426,7 +426,7 @@ endfunction
 
 augroup CTX
     au!
-    au CursorHold  *.[cC] call <SID>cursorhold()
+    au CursorMoved  *.[cC] call <SID>cursorhold()
     au BufEnter    *      call <SID>autohide()
 augroup END
 
