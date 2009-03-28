@@ -18,8 +18,8 @@
 let CTX_lncols=5        " num of cols in context win for line numbers     "
 let CTX_reindent=2      " how deep each level indents (in spaces)         "
 let CTX_autohide=1      " autoclose context win when last C buffer closes "
-let CTX_autoupdate=1    " update the context buf on CursorHold            "
-let CTX_minrows=0       " minimum num of rows for context win             "
+let CTX_autoupdate=0    " update the context buf on CursorHold            "
+let CTX_minrows=4       " minimum num of rows for context win             "
 let CTX_maxrows=20      " maximum num of rows for context win             "
 let CTX_seetop=1        " always see the top of the context buf? BROKEN   "
 let CTX_debug=0
