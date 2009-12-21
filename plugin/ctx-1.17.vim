@@ -14,6 +14,10 @@
 " Note that if you source this file from within an autocommand, you may   "
 " get a non-fatal error when opening a C file.                            "
 
+if !has("perl")
+    finish
+endif
+
 " default vim-ctx settings "
 let CTX_lncols=5        " num of cols in context win for line numbers     "
 let CTX_reindent=2      " how deep each level indents (in spaces)         "
