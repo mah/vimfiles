@@ -943,6 +943,13 @@ function! s:Tlist_FileType_Init(ftype)
 
     let s:tlist_{a:ftype}_ctags_args = '--language-force=' . ctags_ftype .
                             \ ' --' . ctags_ftype . '-types=' . ctags_flags
+
+    " Use user-supplied verbatim command arguments if specified
+    let var = 'g:tlist_' . a:ftype . '_ctags_args'
+    if exists(var)
+		let s:tlist_{a:ftype}_ctags_args .= ' ' . {var}
+    endif
+
     let s:tlist_{a:ftype}_count = cnt
     let s:tlist_{a:ftype}_ctags_flags = ctags_flags
 
