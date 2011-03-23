@@ -88,7 +88,7 @@ syn cluster xmlTagHook add=fsXmlTag
 
 syn match   fsXmlCommentLeader	+\/\/\/+    contained
 syn match   fsXmlComment	+\/\/\/.*$+ contains=fsXmlCommentLeader,@fsXml
-syntax include @fsXml <sfile>:p:h/xml.vim
+syntax include @fsXml syntax/xml.vim
 
 
 
