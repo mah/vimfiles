@@ -179,7 +179,7 @@ else
 endif
 
 " F# keywords
-syn keyword fsKeyword    abstract and as assert begin class default delegate do done downcast downto else end
+syn keyword fsKeyword    abstract and as assert begin class default delegate do done downcast downto elif else end
 syn keyword fsKeyword    enum exception extern false finally for fun function if in inherit interface land lazy let 
 syn keyword fsKeyword    match member  module mutable namespace new null of open or override rec sig static struct then to true try
 syn keyword fsKeyword    type val when inline upcast while with void
