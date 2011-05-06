@@ -1,6 +1,6 @@
 function! s:Verify()
     let l:oldmakeprg = &makeprg
-    let &makeprg = "vcc %"
+    let &makeprg = 'vcc "%"'
     make
     let &makeprg = l:oldmakeprg
 endfunction
@@ -19,7 +19,7 @@ function! s:VerifyFunction()
             " TODO even if non-empty, these tags do not match VCC /f arguments,
             " e.g., typedef struct Match { ... } NoMatch;
             let l:oldmakeprg = &makeprg
-            let &makeprg = "vcc % /f:" . l:fn
+            let &makeprg = 'vcc "%" /f:' . l:fn
             make
         endif
         let &makeprg = l:oldmakeprg
