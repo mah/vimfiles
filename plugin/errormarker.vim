@@ -262,7 +262,7 @@ function! s:InstallDocumentation(full_name, revision)
     return 1
 endfunction
 
-call s:InstallDocumentation(expand('<sfile>:p'), g:loaded_errormarker)
+" TODO call s:InstallDocumentation(expand('<sfile>:p'), g:loaded_errormarker)
 
 " === Cleanup ============================================================{{{1
 
