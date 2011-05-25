@@ -5,6 +5,7 @@ autocmd BufRead,BufNewFile *.dgml setfiletype xml
 set formatoptions+=ln
 set guioptions=
 set nojoinspaces
+set tags=./tags,tags,tags;
 
 " Some syntax file options, cf. :help syn-file-remarks
 let g:c_space_errors=1
