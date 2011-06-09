@@ -1,13 +1,23 @@
-function! s:Verify()
+function! s:VerifyInternal(options)
     let l:oldmakeprg = &makeprg
-    let &makeprg = 'vcc /detectsyntax "%"'
+    let &makeprg = 'vcc /detectsyntax ' . a:options
     make
     let &makeprg = l:oldmakeprg
 endfunction
 
+" Whole file
+function! s:Verify()
+    call s:VerifyInternal('"%"')
+endfunction
+
+" Current file
+function! s:VerifyThis()
+    call s:VerifyInternal('"%" /loc:"%:' . line('.') . '"')
+endfunction
+
+" Function (via ctags)
 function! s:VerifyFunction()
     " Make sure tags are generated...
-    let l:oldmakeprg = &makeprg
     if !exists(":Tlist")
         echo "Taglist plugin not present? Cannot look-up tag..."
     else
@@ -18,13 +28,11 @@ function! s:VerifyFunction()
         else
             " TODO even if non-empty, these tags do not match VCC /f arguments,
             " e.g., typedef struct Match { ... } NoMatch;
-            let l:oldmakeprg = &makeprg
-            let &makeprg = 'vcc /detectsyntax "%" /f:' . l:fn
-            make
+            call s:VerifyInternal('"%" /f:' . l:fn)
         endif
-        let &makeprg = l:oldmakeprg
     endif
 endfunction
 
 command! -nargs=0 Verify call s:Verify()
+command! -nargs=0 VerifyThis call s:VerifyThis()
 command! -nargs=0 VerifyFunction call s:VerifyFunction()
