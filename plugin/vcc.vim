@@ -15,6 +15,11 @@ function! s:VerifyThis()
     call s:VerifyInternal('"%" /loc:"%:' . line('.') . '"')
 endfunction
 
+" Current file as suite
+function! s:VerifySuite()
+    call s:VerifyInternal('"%" /s')
+endfunction
+
 " Function (via ctags)
 function! s:VerifyFunction()
     " Make sure tags are generated...
@@ -36,3 +41,4 @@ endfunction
 command! -nargs=0 Verify call s:Verify()
 command! -nargs=0 VerifyThis call s:VerifyThis()
 command! -nargs=0 VerifyFunction call s:VerifyFunction()
+command! -nargs=0 VerifySuite call s:VerifySuite()
