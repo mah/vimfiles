@@ -73,6 +73,7 @@ syn keyword vccOuter
   \ union_reinterpret
   \ unwrap
   \ unwraps
+  \ updates
   \ usevccoptions
   \ vcc
   \ vcc_attr
