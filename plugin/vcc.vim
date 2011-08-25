@@ -12,7 +12,7 @@ endfunction
 
 " Current file
 function! s:VerifyThis()
-    call s:VerifyInternal('"%" /loc:"%:' . line('.') . '"')
+    call s:VerifyInternal('"%" /loc:"' . expand('%') . ':' . line('.') . '"')
 endfunction
 
 " Current file as suite
