@@ -16,4 +16,7 @@ let g:ruby_fold=1
 let g:tex_fold_enabled=1
 let g:xml_syntax_folding=1
 
+" Start pathogen
+call pathogen#infect()
+
 runtime vimrc.local
