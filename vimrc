@@ -19,4 +19,12 @@ let g:xml_syntax_folding=1
 " Start pathogen
 call pathogen#infect()
 
+fun! LucidaConsole(...)
+  let points = 16
+  if a:0 > 0
+      let points = a:1
+  endif
+  exe "set guifont=Lucida_Console:h" . points . ":cANSI"
+endfun
+
 runtime vimrc.local
