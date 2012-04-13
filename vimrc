@@ -6,6 +6,7 @@ set formatoptions+=ln
 set guioptions=
 set nojoinspaces
 set tags=./tags,tags,tags;
+set wildmode=longest,list:longest,list:full
 
 " Some syntax file options, cf. :help syn-file-remarks
 let g:c_space_errors=1
