@@ -9,6 +9,7 @@ set tags=./tags,tags,tags;
 
 " Some syntax file options, cf. :help syn-file-remarks
 let g:c_space_errors=1
+let g:c_no_trail_space_error=1 " :|
 let g:c_syntax_for_h=1
 let g:perl_fold=1
 let g:perl_fold_blocks=1
