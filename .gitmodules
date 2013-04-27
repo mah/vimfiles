@@ -22,3 +22,6 @@
 [submodule "bundle/LargeFile"]
 	path = bundle/LargeFile
 	url = https://github.com/vim-scripts/LargeFile.git
+[submodule "bundle/abolish"]
+	path = bundle/abolish
+	url = https://github.com/tpope/vim-abolish.git
