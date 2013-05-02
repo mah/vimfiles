@@ -18,6 +18,20 @@ let g:ruby_fold=1
 let g:tex_fold_enabled=1
 let g:xml_syntax_folding=1
 
+" Swap file (note: from https://github.com/tpope/vim-sensible.git)
+let s:dir = has('win32') ? '$APPDATA/Vim' : match(system('uname'), "Darwin") > -1 ? '~/Library/Vim' : empty($XDG_DATA_HOME) ? '~/.local/share/vim' : '$XDG_DATA_HOME/vim'
+if isdirectory(expand(s:dir))
+  if &directory =~# '^\.,'
+    let &directory = expand(s:dir) . '/swap//,' . &directory
+  endif
+  if &backupdir =~# '^\.,'
+    let &backupdir = expand(s:dir) . '/backup//,' . &backupdir
+  endif
+  if exists('+undodir') && &undodir =~# '^\.\%(,\|$\)'
+    let &undodir = expand(s:dir) . '/undo//,' . &undodir
+  endif
+endif
+
 " Start pathogen
 call pathogen#infect()
 
