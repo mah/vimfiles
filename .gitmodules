@@ -37,3 +37,6 @@
 [submodule "bundle/ShowMultiBase"]
 	path = bundle/ShowMultiBase
 	url = https://github.com/vim-scripts/ShowMultiBase.git
+[submodule "bundle/BlockDiff"]
+	path = bundle/BlockDiff
+	url = https://github.com/vim-scripts/BlockDiff.git
