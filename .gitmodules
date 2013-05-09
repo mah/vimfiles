@@ -28,3 +28,6 @@
 [submodule "bundle/foldsearch"]
 	path = bundle/foldsearch
 	url = https://github.com/embear/vim-foldsearch
+[submodule "bundle/localvimrc"]
+	path = bundle/localvimrc
+	url = https://github.com/embear/vim-localvimrc.git
