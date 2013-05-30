@@ -55,3 +55,6 @@
 [submodule "bundle/fsharp"]
 	path = bundle/fsharp
 	url = https://github.com/kongo2002/fsharp-vim.git
+[submodule "bundle/errormarker"]
+	path = bundle/errormarker
+	url = https://github.com/vim-scripts/errormarker.vim.git
