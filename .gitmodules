@@ -52,3 +52,6 @@
 [submodule "bundle/snipmate"]
 	path = bundle/snipmate
 	url = https://github.com/garbas/vim-snipmate.git
+[submodule "bundle/fsharp"]
+	path = bundle/fsharp
+	url = https://github.com/kongo2002/fsharp-vim.git
