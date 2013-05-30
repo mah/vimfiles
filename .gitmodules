@@ -67,3 +67,6 @@
 [submodule "bundle/scratch"]
 	path = bundle/scratch
 	url = https://github.com/vim-scripts/scratch.vim.git
+[submodule "bundle/matchit"]
+	path = bundle/matchit
+	url = https://github.com/vim-scripts/matchit.zip.git
