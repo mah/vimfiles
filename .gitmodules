@@ -58,3 +58,6 @@
 [submodule "bundle/errormarker"]
 	path = bundle/errormarker
 	url = https://github.com/vim-scripts/errormarker.vim.git
+[submodule "bundle/taglist"]
+	path = bundle/taglist
+	url = https://github.com/bucciarati/taglist.vim.git
