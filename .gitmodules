@@ -73,3 +73,6 @@
 [submodule "bundle/AsyncCommand"]
 	path = bundle/AsyncCommand
 	url = https://github.com/pydave/AsyncCommand.git
+[submodule "bundle/Tail-Bundle"]
+	path = bundle/Tail-Bundle
+	url = https://github.com/vim-scripts/Tail-Bundle.git
