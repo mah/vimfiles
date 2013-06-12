@@ -32,10 +32,8 @@ syn keyword dosbatchStatement	goto call exit
 syn keyword dosbatchConditional	if else
 syn keyword dosbatchRepeat	for
 
-" Some operators - first lot are case sensitive!
-syn case match
-syn keyword dosbatchOperator    EQU NEQ LSS LEQ GTR GEQ
-syn case ignore
+" Some operators
+syn keyword dosbatchOperator    equ neq lss leq gtr geq
 syn match dosbatchOperator      "\s[-+\*/%!~]\s"
 syn match dosbatchOperator      "="
 syn match dosbatchOperator      "[-+\*/%]="
@@ -46,6 +44,7 @@ syn match dosbatchIfOperator    "if\s\+\(\(not\)\=\s\+\)\=\(exist\|defined\|erro
 syn match dosbatchString	"\"[^"]*\"" contains=dosbatchVariable,dosBatchArgument,dosbatchSpecialChar,@dosbatchNumber,@Spell
 syn match dosbatchString	"\<echo\([^)>|]\|\^\@<=[)>|]\)*"lc=4 contains=dosbatchVariable,dosbatchArgument,dosbatchSpecialChar,@dosbatchNumber,@Spell
 syn match dosbatchEchoOperator  "\<echo\s\+\(on\|off\)\s*$"lc=4
+syn match dosbatchSetlocal      "\<setlocal\(\s\+\(enable\|disable\)\(extensions\|delayedexpansion\)\)*"
 
 " For embedded commands
 syn match dosbatchCmd		"(\s*'[^']*'"lc=1 contains=dosbatchString,dosbatchVariable,dosBatchArgument,@dosbatchNumber,dosbatchImplicit,dosbatchStatement,dosbatchConditional,dosbatchRepeat,dosbatchOperator
@@ -106,7 +105,7 @@ syn keyword dosbatchImplicit    date del dir diskcomp diskcopy doskey echo endlo
 syn keyword dosbatchImplicit    erase fc find findstr format ftype
 syn keyword dosbatchImplicit    graftabl help keyb label md mkdir mode more move
 syn keyword dosbatchImplicit    path pause popd print prompt pushd rd recover rem
-syn keyword dosbatchImplicit    ren rename replace restore rmdir set setlocal shift
+syn keyword dosbatchImplicit    ren rename replace restore rmdir set shift
 syn keyword dosbatchImplicit    sort start subst time title tree type ver verify
 syn keyword dosbatchImplicit    vol xcopy
 
@@ -131,6 +130,7 @@ if version >= 508 || !exists("did_dosbatch_syntax_inits")
 
   HiLink dosbatchOperator       Operator
   HiLink dosbatchEchoOperator   dosbatchOperator
+  HiLink dosbatchSetlocal       dosbatchOperator
   HiLink dosbatchIfOperator     dosbatchOperator
 
   HiLink dosbatchArgument	Identifier
