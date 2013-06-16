@@ -123,107 +123,105 @@ snippet advfunfull
 
 # Comment block
 snippet comment
-	<#
-	 #>
+	<# ${1:comment} #>
 
 # Do until
 snippet dou
 	do
 	{
-	    
+		${2:# body...}
 	}
-	until ($x -gt 0)
+	until (${1:$x -gt 0})
 
 # Do while
 snippet dow
 	do
 	{
-	    
+		${2:# body...}
 	}
-	while ($x -gt 0)
+	while (${1:$x -gt 0})
 
 # For loop
 snippet for
-	for ($i = 1; $i -lt 99; $i++)
+	for ($${1:var} = 0; $$1 < $${2:count}; $$1${3:++}) {
 	{ 
-	    
+		${4:# body...}
 	}
 
 # Foreach loop
 snippet foreach
-	foreach ($item in $collection)
+	foreach ($${1:item} in $${2:collection})
 	{
-	    
+		${3:# body...}
 	}
 
 # Function
 snippet fun
-	function MyFunction ($param1, $param2)
+	function ${1:MyFunction} (${2:$param1, $param2})
 	{
-	    
+		${3:# body...}
 	}
 
 # If then statement
 snippet ift
-	if ($x -gt $y)
+	if (${1:$x -gt $y})
 	{
-	    
+		${2:# if part}
 	}
 	
 # If then else statement
 snippet ifte
-	if ($x -lt $y)
+	if (${1:$x -gt $y})
 	{
-	    
+		${2:# if part}
 	}
 	else
 	{
-	    
+		${3:# else part}
 	}
 
 # Switch statement
 snippet switch
-	switch ($x)
+	switch ($${1:var})
 	{
-	    'value1' {}
-	    {$_ -in 'A', 'B', 'C'} {}
-	    'value3' {}
-	    Default {}
+		${2:<# value, scriptblock, Default #>} {
+			${3}
+		}
 	}
 
 # Try catch finally
-snippet tryfull
+snippet trycf
 	try
 	{
-	    1/0
+		1/0
 	}
 	catch [DivideByZeroException]
 	{
-	    Write-Host "Divide by zero exception"
+		Write-Host "Divide by zero exception"
 	}
 	catch [System.Net.WebException], [System.Exception]
 	{
-	    Write-Host "Other exception"
+		Write-Host "Other exception"
 	}
 	finally
 	{
-	    Write-Host "cleaning up ..."
+		Write-Host "cleaning up ..."
 	}
 
 # Try catch
-snippet try
+snippet tryf
 	try
 	{
-	    
+		${1:# body}
 	}
 	finally
 	{
-	    
+		${2:# clean up}
 	}
 
 # while
 snippet while
-	while ($x -gt 0)
+	while (${1:$x -gt 0})
 	{
-	    
+		${2}
 	}
