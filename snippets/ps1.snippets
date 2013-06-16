@@ -1,0 +1,229 @@
+# Cmdlet advanced function
+snippet advfun
+	<#
+	.Synopsis
+		Short description
+	.DESCRIPTION
+		Long description
+	.EXAMPLE
+		Example of how to use this cmdlet
+	.EXAMPLE
+		Another example of how to use this cmdlet
+	#>
+	function Verb-Noun
+	{
+		[CmdletBinding()]
+		[OutputType([int])]
+		Param(
+			# Param1 help description
+			[Parameter(Mandatory=$true,
+				ValueFromPipelineByPropertyName=$true,
+				Position=0)]
+			$Param1,
+
+			# Param2 help description
+			[int]
+			$Param2
+		)
+
+		Begin
+		{
+		}
+
+		Process
+		{
+		}
+
+		End
+		{
+		}
+	}
+
+# Cmdlet advanced function - complete
+snippet advfunfull
+	<#
+	.Synopsis
+		Short description
+	.DESCRIPTION
+		Long description
+	.EXAMPLE
+		Example of how to use this cmdlet
+	.EXAMPLE
+		Another example of how to use this cmdlet
+	.INPUTS
+		Inputs to this cmdlet (if any)
+	.OUTPUTS
+		Output from this cmdlet (if any)
+	.NOTES
+		General notes
+	.COMPONENT
+		The component this cmdlet belongs to
+	.ROLE
+		The role this cmdlet belongs to
+	.FUNCTIONALITY
+		The functionality that best describes this cmdlet
+	#>
+	function Verb-Noun
+	{
+		[CmdletBinding(DefaultParameterSetName='Parameter Set 1', 
+			SupportsShouldProcess=$true, 
+			PositionalBinding=$false,
+			HelpUri = 'http://www.microsoft.com/',
+			ConfirmImpact='Medium')]
+		[OutputType([String])]
+		Param
+		(
+			# Param1 help description
+			[Parameter(Mandatory=$true, 
+				ValueFromPipeline=$true,
+				ValueFromPipelineByPropertyName=$true, 
+				ValueFromRemainingArguments=$false, 
+				Position=0,
+				ParameterSetName='Parameter Set 1')]
+			[ValidateNotNull()]
+			[ValidateNotNullOrEmpty()]
+			[ValidateCount(0, 5)]
+			[ValidateSet("sun", "moon", "earth")]
+			[Alias("p1")] 
+			$Param1,
+	
+			# Param2 help description
+			[Parameter(ParameterSetName='Parameter Set 1')]
+			[AllowNull()]
+			[AllowEmptyCollection()]
+			[AllowEmptyString()]
+			[ValidateScript({$true})]
+			[ValidateRange(0, 5)]
+			[int]
+			$Param2,
+	
+			# Param3 help description
+			[Parameter(ParameterSetName='Another Parameter Set')]
+			[ValidatePattern("[a-z]*")]
+			[ValidateLength(0, 15)]
+			[String]
+			$Param3
+		)
+	
+		Begin
+		{
+		}
+	
+		Process
+		{
+			if ($pscmdlet.ShouldProcess("Target", "Operation"))
+			{
+			}
+		}
+	
+		End
+		{
+		}
+	}
+
+# Comment block
+snippet comment
+	<#
+	 #>
+
+# Do until
+snippet dou
+	do
+	{
+	    
+	}
+	until ($x -gt 0)
+
+# Do while
+snippet dow
+	do
+	{
+	    
+	}
+	while ($x -gt 0)
+
+# For loop
+snippet for
+	for ($i = 1; $i -lt 99; $i++)
+	{ 
+	    
+	}
+
+# Foreach loop
+snippet foreach
+	foreach ($item in $collection)
+	{
+	    
+	}
+
+# Function
+snippet fun
+	function MyFunction ($param1, $param2)
+	{
+	    
+	}
+
+# If then statement
+snippet ift
+	if ($x -gt $y)
+	{
+	    
+	}
+	
+# If then else statement
+snippet ifte
+	if ($x -lt $y)
+	{
+	    
+	}
+	else
+	{
+	    
+	}
+
+# Switch statement
+snippet switch
+	switch ($x)
+	{
+	    'value1' {}
+	    {$_ -in 'A', 'B', 'C'} {}
+	    'value3' {}
+	    Default {}
+	}
+
+# Try catch finally
+snippet tryfull
+	try
+	{
+	    1/0
+	}
+	catch [DivideByZeroException]
+	{
+	    Write-Host "Divide by zero exception"
+	}
+	catch [System.Net.WebException], [System.Exception]
+	{
+	    Write-Host "Other exception"
+	}
+	finally
+	{
+	    Write-Host "cleaning up ..."
+	}
+
+# Try catch
+snippet try
+	try
+	{
+	    
+	}
+	finally
+	{
+	    
+	}
+
+# while
+snippet while
+	while ($x -gt 0)
+	{
+	    
+	}
