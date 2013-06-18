@@ -1,5 +1,5 @@
-iabbr % ForEach-Object
-iabbr ? Where-Object
+" iabbr % ForEach-Object
+" iabbr ? Where-Object
 iabbr ac Add-Content
 iabbr asnp Add-PSSnapin
 iabbr cat Get-Content
