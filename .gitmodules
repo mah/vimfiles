@@ -18,7 +18,8 @@
 	url = https://github.com/vim-scripts/Mark--Karkat.git
 [submodule "bundle/ps1"]
 	path = bundle/ps1
-	url = https://github.com/PProvost/vim-ps1.git
+	#url = https://github.com/PProvost/vim-ps1.git
+	url = https://github.com/heaths/vim-ps1.git
 [submodule "bundle/LargeFile"]
 	path = bundle/LargeFile
 	url = https://github.com/vim-scripts/LargeFile.git
