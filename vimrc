@@ -9,6 +9,10 @@ set tags=./tags,tags,tags;
 set wildmode=longest,list:longest,list:full
 set clipboard=unnamed
 
+set expandtab
+set shiftwidth=4
+set tabstop=4
+
 " Some syntax file options, cf. :help syn-file-remarks
 let g:c_space_errors=1
 let g:c_no_trail_space_error=1 " :|
