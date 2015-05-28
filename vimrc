@@ -1,4 +1,5 @@
 autocmd BufNewFile,BufRead *.bpl setfiletype boogie
+autocmd BufNewFile,BufRead *.md setfiletype markdown
 "autocmd BufRead,BufNewFile *.ps1 setfiletype ps1
 autocmd BufRead,BufNewFile *.dgml setfiletype xml
 
