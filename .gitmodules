@@ -28,7 +28,7 @@
 	url = https://github.com/tpope/vim-abolish.git
 [submodule "bundle/foldsearch"]
 	path = bundle/foldsearch
-	url = https://github.com/mah/vim-foldsearch
+	url = https://github.com/embear/vim-foldsearch
 [submodule "bundle/localvimrc"]
 	path = bundle/localvimrc
 	url = https://github.com/embear/vim-localvimrc.git
@@ -80,6 +80,9 @@
 [submodule "bundle/calendar"]
 	path = bundle/calendar
 	url = https://github.com/mattn/calendar-vim.git
+[submodule "bundle/ctrlp"]
+	path = bundle/ctrlp
+	url = https://github.com/kien/ctrlp.vim
 [submodule "bundle/typescript-vim"]
 	path = bundle/typescript-vim
 	url = https://github.com/leafgarland/typescript-vim.git
