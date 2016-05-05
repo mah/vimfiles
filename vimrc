@@ -24,6 +24,9 @@ let g:ruby_fold=1
 let g:tex_fold_enabled=1
 let g:xml_syntax_folding=1
 
+" Set large file minimum size to 100 MiB
+let g:LargeFile = 100
+
 " Swap file (note: from https://github.com/tpope/vim-sensible.git)
 let s:dir = has('win32') ? '$APPDATA/Vim' : match(system('uname'), "Darwin") > -1 ? '~/Library/Vim' : empty($XDG_DATA_HOME) ? '~/.local/share/vim' : '$XDG_DATA_HOME/vim'
 if isdirectory(expand(s:dir))
