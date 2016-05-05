@@ -89,3 +89,6 @@
 [submodule "bundle/stephpy-vim-yaml"]
 	path = bundle/stephpy-vim-yaml
 	url = https://github.com/stephpy/vim-yaml
+[submodule "bundle/sensible"]
+	path = bundle/sensible
+	url = https://github.com/tpope/vim-sensible.git
