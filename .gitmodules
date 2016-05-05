@@ -22,7 +22,7 @@
 	url = https://github.com/heaths/vim-ps1.git
 [submodule "bundle/LargeFile"]
 	path = bundle/LargeFile
-	url = https://github.com/vim-scripts/LargeFile.git
+	url = https://github.com/mah/LargeFile.vim.git
 [submodule "bundle/abolish"]
 	path = bundle/abolish
 	url = https://github.com/tpope/vim-abolish.git
