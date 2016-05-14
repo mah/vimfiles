@@ -40,7 +40,7 @@
 	url = https://github.com/vim-scripts/ShowMultiBase.git
 [submodule "bundle/BlockDiff"]
 	path = bundle/BlockDiff
-	url = https://github.com/vim-scripts/BlockDiff.git
+	url = https://github.com/mah/BlockDiff.git
 [submodule "bundle/tlib"]
 	path = bundle/tlib
 	url = https://github.com/tomtom/tlib_vim.git
