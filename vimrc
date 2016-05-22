@@ -1,3 +1,5 @@
+runtime bundle/pathogen/autoload/pathogen.vim
+
 autocmd BufNewFile,BufRead *.bpl setfiletype boogie
 autocmd BufNewFile,BufRead *.md setfiletype markdown
 "autocmd BufRead,BufNewFile *.ps1 setfiletype ps1
